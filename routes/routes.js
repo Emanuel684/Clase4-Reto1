@@ -2,73 +2,71 @@ const {Router} = require('express');
 const router = Router();
 const fs = require('fs');
 
-const moviesFile = fs.readFileSync("./movies.json","utf8");
-let movies = JSON.parse(moviesFile);
+const booksFile = fs.readFileSync("./books.json","utf8");
+let books = JSON.parse(booksFile);
 
 router.get("/",(req,res)=>{
-    res.json("Bienvenido a mi API");
+    res.json("Bienvenido a la API sobre los mejores libros.");
 });
 
-router.get("/movies",(req,res)=>{
-  res.status(200).json(movies);
+router.get("/books",(req,res)=>{
+  res.status(200).json(books);
 });
 
-router.post("/movies",(req,res)=>{
+router.post("/newBooks",(req,res)=>{
     
-  const { title, director, year, duration, genre, poster} = req.body;
+  const { titulo,autor,ano,pais,idioma } = req.body;
 
-  if(!title || !director || !year || !duration || !genre || !poster ){
+  if(!titulo || !autor || !ano || !pais || !idioma ){
     res.status(401).json({error:"Por favor, diligencie todos los datos"});
   }else{
 
-  const id = movies.length + 1;
+  const id = books.length + 1;
 
 
-  let  newMovie = {
+  let  newBook = {
     id,
-    title,
-    director,
-    year,
-    duration,
-    genre,
-    poster
+    titulo,
+    autor,
+    ano,
+    pais,
+    idioma
   };
 
-  movies.push(newMovie);
-  const json_movies = JSON.stringify(movies);
+  books.push(newBook);
+  const json_books = JSON.stringify(books);
 
-  fs.writeFileSync("./movies.json", json_movies, "utf-8");
+  fs.writeFileSync("./books.json", json_books, "utf-8");
 
-   res.status(200).json(movies);
+   res.status(200).json(books);
 
   }
 });
 
-router.put("/movies/:id",(req,res)=>{
+router.put("/updateBooks/:id",(req,res)=>{
 
-  const { title, director, year, duration, genre, poster}=  req.body;
+  const { titulo,autor,ano,pais,idioma }=  req.body;
   const id = req.params.id;
    
-  if(!title || !director || !year || !duration || !genre || !poster || !id){
+  if(!titulo || !autor || !ano || !pais || !idioma || !id){
     res.status(401).json({error:"Debe completar los datos y especificar el id."});
   }else{
      
-    movies.filter((movie)=>{
+    books.filter((books)=>{
 
-     if(movie.id == id){
-       movie.title = title;
-       movie.director = director;
-       movie.year = year;
-       movie.duration = duration;
-       movie.genre = genre;
-       movie.poster = poster;
+     if(books.id == id){
+       books.titulo = titulo;
+       books.autor = autor;
+       books.ano = ano;
+       books.pais = pais;
+       books.idioma = idioma;
      }
     }); 
 
-    const json_movies = JSON.stringify(movies);
-    fs.writeFileSync("./movies.json",json_movies,"utf-8");
+    const json_books = JSON.stringify(books);
+    fs.writeFileSync("./books.json",json_books,"utf-8");
 
-    res.status(200).json(movies);
+    res.status(200).json(books);
 
 
   }
@@ -78,19 +76,19 @@ router.put("/movies/:id",(req,res)=>{
 });
 
 
-router.delete("/movies/:id",(req,res)=>{
+router.delete("/deleteBooks/:id",(req,res)=>{
     const id = req.params.id;
 
     if(!id){
       res.status(401).json({error: "Especifique un id"});
     }else{
-      const indexMovie = movies.findIndex((movie) => movie.id === id);
-      movies.splice(indexMovie,1);
+      const indexMovie = books.findIndex((movie) => movie.id === id);
+      books.splice(indexMovie,1);
 
-      const json_movies = JSON.stringify(movies);
-      fs.writeFileSync("./movies.json", json_movies,"utf-8");
+      const json_books = JSON.stringify(books);
+      fs.writeFileSync("./books.json", json_books,"utf-8");
 
-      res.status(200).json(movies);
+      res.status(200).json(books);
 
      
     }
