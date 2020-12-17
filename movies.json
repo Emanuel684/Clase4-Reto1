@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "A CLOCK ORANGE",
+    "director": "Stanley Kubrick",
+    "year": "1971",
+    "duration": "2h 17m",
+    "genre": "Ciencia ficción/Criemn",
+    "poster": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQai9TXjeYfWDDQf-INkDHmWkbaEUHs9TPy3py_XUmU_-V8uEpx"
+  },
+  {
+    "id": 2,
+    "title": "Pulp Fiction",
+    "director": "Quentin Tarantino",
+    "year": "1994",
+    "duration": "2h 58m",
+    "genre": "Crimen/Comedia",
+    "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNXausZcJhov0ejL3Qp7PUc3FPoDZMNk01JQ&usqp=CAU"
+  },
+  {
+    "id": 3,
+    "title": "EYES WIDE SHUT",
+    "director": "Stanley Kubrick",
+    "year": "1999",
+    "duration": "2h 39m",
+    "genre": "Misterio/Drama",
+    "poster": "https://elcorreoweb.es/binrepository/461x301/0c0/0d0/none/10703/WHNW/eyes-wide-shut_20475657_20200726182009.jpg"
+  }
+]
