@@ -1,1 +1,98 @@
-[{"id":1,"titulo":"Poema de Gilgamesh","autor":"Anónimo","ano":"Siglo XVII a.C.","pais":"Sumeria e Imperio acadio","idioma":"Acadio"},{"id":2,"titulo":"Hijos de la medianoche","autor":"Salman Rushdie","ano":"1981","pais":"India","idioma":"Inglés"}]
+[
+  {
+    "id": 1,
+    "titulo": "Cien años de soledad",
+    "autor": "Anónimo",
+    "ano": "Siglo XVII a.C.",
+    "pais": "Sumeria e Imperio acadio",
+    "idioma": "Acadio"
+  },
+  {
+    "id": 2,
+    "titulo": "Hijos de la medianoche",
+    "autor": "Salman Rushdie",
+    "ano": "1981",
+    "pais": "India",
+    "idioma": "Inglés"
+  },
+  {
+    "id": 3,
+    "titulo": "La señora Dalloway",
+    "autor": "Virginia Woolf",
+    "ano": "1925",
+    "pais": "Reino Unido",
+    "idioma": "Inglés"
+  },
+  {
+    "id": 4,
+    "titulo": "Guerra y paz",
+    "autor": "Lev Tolstói",
+    "ano": "1865-1869",
+    "pais": "Rusia",
+    "idioma": "Ruso"
+  },
+  {
+    "id": 5,
+    "titulo": "Ana Karenina",
+    "autor": "Lev Tolstói",
+    "ano": "1877",
+    "pais": "Rusia",
+    "idioma": "Ruso"
+  },
+  {
+    "id": 6,
+    "titulo": "Rojo y negro",
+    "autor": "Stendhal",
+    "ano": "1830",
+    "pais": "Francia",
+    "idioma": "Francés"
+  },
+  {
+    "id": 7,
+    "titulo": "Los viajes de Gulliver",
+    "autor": "Jonathan Swift",
+    "ano": "1726",
+    "pais": "Irlanda",
+    "idioma": "Inglés"
+  },
+  {
+    "id": 8,
+    "titulo": "De la tierra a la luna",
+    "autor": "Jonathan Swift",
+    "ano": "1726",
+    "pais": "Irlanda",
+    "idioma": "Inglés"
+  },
+  {
+    "id": 9,
+    "titulo": "20000 leguas de viaje submarino",
+    "autor": "Jonathan Swift",
+    "ano": "1726",
+    "pais": "Irlanda",
+    "idioma": "Inglés"
+  },
+  {
+    "id": null,
+    "titulo": "Camilo",
+    "autor": "Jonathan Swift",
+    "ano": "1726",
+    "pais": "Irlanda",
+    "idioma": "Inglés"
+  },
+  {
+    "id": 11,
+    "titulo": "Camilo",
+    "autor": "Jonathan Swift",
+    "ano": "1726",
+    "pais": "Irlanda",
+    "idioma": "Inglés"
+  },
+  {
+    "id": 13,
+    "titulo": "La vida es sueño",
+    "autor": "Anonimo",
+    "ano": "2020",
+    "pais": "España",
+    "idioma": "Español"
+  }
+]

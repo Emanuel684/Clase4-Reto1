@@ -1,20 +1,6 @@
 const express =   require('express');
 const path = require('path');
 
-//LOWDB
-const low = require('lowdb');
-
-const FileSync = require('lowdb/adapters/FileSync');
-
-const adapter = new FileSync('books.json');
-const books = low(adapter);
-
-// SET SOME DEFAULTS
-books.defaults({ posts: [], user: []})
-
-
-//FIN
-
 const morgan = require('morgan');
 const app = express();
 
