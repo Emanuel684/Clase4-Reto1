@@ -10,7 +10,6 @@ const FileSync = require("lowdb/adapters/FileSync");
 const adapter = new FileSync("books.json");
 const book = low(adapter);
 
-
 // POST
 
 router.post("/newBooks", (req, res) => {
@@ -72,7 +71,7 @@ router.delete("/deleteBooks/:id", (req, res) => {
   } else {
     book.remove({ id: idBook }).write();
 
-    console.log(book.remove({ id: idBook }))
+    console.log(book.remove({ id: idBook }));
 
     res.status(200).json(book);
   }
@@ -91,8 +90,18 @@ router.get("/", (req, res) => {
 
 router.get("/books", (req, res) => {
   book.get("libros").value();
-  res.status(200).json(books);
+  res.status(200).json(book);
 });
 
+// GER POR ID
+
+router.get('/books/:id', (req, res) => {
+
+  const idBook = parseInt(req.params.id);
+  
+  const libro = book.find({id: idBook}).value();
+
+  res.status(200).json(libro)
+});
 
 module.exports = router;
